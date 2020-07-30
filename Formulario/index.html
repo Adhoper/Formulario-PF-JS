@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel ="stylesheet" href="estilos.css"/>
+    <title>Formulario</title>
+    <h1>Formulario</h1>
+</head>
+<body>
+
+    <p>Nombre: <input type="text" id="nombre" name="nombre" style="border-width: 2px;"></p>
+    <p>Apellido: <input type="text" id="apellido" name="apellido" style="border-width: 2px;"></p>
+    <p>Cedula: <input type="text" onkeypress="return numerosValid(event)" id="cedula" name="cedula" style="border-width: 2px;" onkeyup="MascaraCedula()" onKeyDown="return limitarCaracteres(event,this.value,13)"></p>
+    <p>Correo Electronico: <input type="text" id="correoE" name="correo electronico" style="border-width: 2px;"></p>
+    <center>
+    <button type="button" id="boton" onclick="Comprobar(); validarEmail(document.getElementById('correoE').value)">Enviar</button>
+    <div id="Alerta"></div>
+</center>
+</body>
+<script src="main.js" type="text/javascript"></script>
+</html>
